@@ -13,6 +13,8 @@ import json
 #from xml.dom.minidom import Document
 import xml.etree.ElementTree as xml
 
+def index(request):
+    return render_to_response('index.html', context_instance=RequestContext(request))
 
 def create(request):
     # server-side validation - unnecessary unless user turns off js

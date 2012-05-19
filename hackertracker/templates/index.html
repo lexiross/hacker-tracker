@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>HackerTracker!</title>
+        <link href="{{ STATIC_URL }}styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            HACKER TRACKER
+            </header>
+        <div id="map_container">
+            <div id="map">
+            </div>
+        </div>
+        <div id="form_container">
+            <div id="form_header">Share your summer location:</div>
+            <form id="create_form" name="create" action="">
+                Name: <input type="text" id="name">
+                Email: <input type="text" id="email">
+                What are you doing this summer? <textarea id="description">
+                Where will you be? <input type="text" id="location">
+                <input type="submit" value="Share">
+            </form>
+        </div>
+    </body>
+</html>

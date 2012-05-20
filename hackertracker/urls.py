@@ -1,4 +1,5 @@
 from django.conf.urls.defaults import patterns, include, url
+from hackers import views
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -7,6 +8,8 @@ from django.conf.urls.defaults import patterns, include, url
 urlpatterns = patterns('',
     (r'^$', views.index),
     (r'index/', views.index),
+    (r'create/$', views.create),
+    (r'get_markers/$', views.get_markers),
     # Examples:
     # url(r'^$', 'hackertracker.views.home', name='home'),
     # url(r'^hackertracker/', include('hackertracker.foo.urls')),

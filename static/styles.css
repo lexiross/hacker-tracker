@@ -1,9 +1,7 @@
 body {
-    font: "Helvetica";
+    font-family: "Helvetica", sans-serif;
     font-size: 10pt;
 }
-
-// set side-by-side divs for map and form
 
 #map {
     width: 637px;

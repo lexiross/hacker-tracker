@@ -6,10 +6,10 @@ from django.http import HttpResponseRedirect
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from hackers.models import *
-from hackers.forms import *
-from django.utils import simplejson
+from django.utils import simplejson as json
 from django.http import HttpResponse
-import json
+import pdb
+#import json
 #from xml.dom.minidom import Document
 import xml.etree.ElementTree as xml
 
@@ -45,7 +45,22 @@ def create(request):
 # create new hacker model
 # overlay on graph
 
-def get_markers(request):
+# Generate marker data in json format
+def get_markers_json(request):
+    hackers = Hacker.objects.all()
+
+    markers = []
+    for h in hackers:
+        m = { 'name': h.name, 'email': h.email, 'loc': h.location, 'description': h.description, \
+                'lat': h.lat, 'lng': h.lng }
+        markers.append(m)
+
+    #pdb.set_trace()
+    json_data = json.dumps({'markers': markers})
+    return HttpResponse(json_data, mimetype="application/json; charset=utf8")
+
+# Generate marker data in xml format (not using)
+def get_markers_xml(request):
     hackers = Hacker.objects.all()
 
     # generate XML (as in tutorial)

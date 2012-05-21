@@ -11,21 +11,23 @@
             HACKER TRACKER
             </header>
         <div id="map_container">
-            <div id="map">
+            <div id="map" style="width: 637px; height: 525px">
             </div>
         </div>
         <div id="form_container">
-            <div id="form_header">Share your summer location:</div>
+            <div id="form_header">Hey Hackers! Share your summer plans:</div>
             <form id="create_form" name="create" action="">
-                Name: <input type="text" id="name">
-                Email: <input type="text" id="email">
-                What are you doing this summer? <textarea id="description">
-                Where will you be? <input type="text" id="location">
-                <input type="submit" value="Share">
+               <div id="name_field">Name <input type="text" id="name"></div>
+               <div id="email_field"> Email <input type="text" id="email"></div>
+               <div id="description_field">What are you doing this summer? <textarea id="description"></textarea></div>
+               <div id="location_field">Where will you be? <input type="text" id="location"></div>
+                <div id="submit"><input type="submit" value="Share"></div>
             </form>
             <div id="form_message" style="display:none"></div>
         </div>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <div id="gmap_script"></div>
+        <script type="text/javascript" src="{{ STATIC_URL }}util.js"></script>
         <script type="text/javascript" src="{{ STATIC_URL }}map.js"></script>
         <script type="text/javascript" src="{{ STATIC_URL }}form.js"></script>
     </body>

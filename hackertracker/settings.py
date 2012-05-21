@@ -113,7 +113,7 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     "/Users/lexiross/Documents/Development/hacker-tracker/hackertracker/templates",
     "/var/www/hacker-tracker/hackertracker/templates",
-    "/var/www/hacker-tracker.lexiross.com/html/hackertracker/templates",
+    "/var/www/hackertracker.lexiross.com/html/hackertracker/templates",
 )
 
 INSTALLED_APPS = (

@@ -1,7 +1,11 @@
 # Django settings for hackertracker project.
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+import socket
+
+if socket.gethostname() == 'tesla' or socket.gethostname() == 'plato':
+    DEBUG = TEMPLATE_DEBUG = False
+else:
+    DEBUG = TEMPLATE_DEBUG = True
 
 ADMINS = (
     ('Lexi Ross', 'lexiberylross@gmail.com'),
